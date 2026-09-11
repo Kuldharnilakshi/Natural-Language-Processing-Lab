@@ -1,1 +1,57 @@
 
+# Assignment 3 – Bag of Words & TF-IDF
+
+## Aim
+Convert text documents into numerical vectors using Bag of Words (BoW) and TF-IDF.
+
+## What is Bag of Words?
+BoW converts text into a matrix based on word frequency.
+It ignores grammar and word order.
+
+Example:
+"I love NLP" → {I:1, love:1, NLP:1}
+
+## What is TF-IDF?
+TF-IDF gives importance to words based on their frequency in a document and rarity across all documents.
+
+Formula:
+TF = Word Count / Total Words
+IDF = log(N / DF) + 1
+TF-IDF = TF × IDF
+
+## Steps Performed
+1. Create text corpus.
+2. Build vocabulary.
+3. Generate BoW manually using Counter.
+4. Calculate TF matrix.
+5. Calculate IDF vector.
+6. Generate TF-IDF manually.
+7. Verify results using Scikit-learn.
+8. Find top 5 keywords for each class.
+
+## Libraries Used
+- NumPy → Matrix operations
+- Counter → Word frequency
+- Scikit-learn → BoW & TF-IDF
+
+## Important Functions
+- Counter() → Count word frequency
+- CountVectorizer() → Creates BoW
+- TfidfVectorizer() → Creates TF-IDF
+- fit_transform() → Converts text into vectors
+- get_feature_names_out() → Returns vocabulary
+
+## Difference
+
+BoW:
+- Uses word count
+- Simple representation
+
+TF-IDF:
+- Uses weighted importance
+- Reduces effect of common words
+
+## Output
+- BoW Matrix
+- TF-IDF Matrix
+- Top 5 keywords for ML, DL, AI and NLP
