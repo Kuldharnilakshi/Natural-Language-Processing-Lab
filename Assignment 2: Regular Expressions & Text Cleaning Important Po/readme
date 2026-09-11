@@ -1,1 +1,54 @@
 
+# Assignment 2 – Regular Expressions & Text Cleaning
+
+## Aim
+Clean noisy text using Regular Expressions (Regex) in Python.
+
+## What is Regex?
+Regex (Regular Expression) is a pattern used to search, extract,
+replace, or remove specific text patterns.
+
+## Libraries
+- `re` → Regular Expressions and text pattern matching
+- `pandas` → Data handling (if required)
+
+## Cleaning Steps
+1. Detect and replace URLs with `[URL]`.
+2. Detect and replace emails with `[EMAIL]`.
+3. Detect user mentions like `@john` and replace with `[USER]`.
+4. Remove hashtags like `#NLPConf2025`.
+5. Detect phone numbers.
+6. Remove HTML tags.
+7. Remove special characters.
+8. Remove multiple spaces.
+9. Convert text to lowercase.
+
+## Important Regex Patterns
+- Email → `[\w.+-]+@[\w-]+\.[\w\.-]+`
+- URL → `https?://[\S]+|www\.[\S]+`
+- Mention → `@\w+`
+- Hashtag → `#\w+`
+- HTML → `<[^>]+>`
+- Special characters → `[^a-zA-Z0-9\s]`
+- Multiple spaces → `\s+`
+
+## Important Functions
+- `re.compile()` → creates a reusable regex pattern.
+- `findall()` → finds all matching patterns.
+- `sub()` → replaces matching text.
+- `strip()` → removes extra spaces from beginning/end.
+- `lower()` → converts text to lowercase.
+
+## Example
+Input:
+`@john Check https://example.com and email test@gmail.com`
+
+Output:
+`[USER] Check [URL] and email [EMAIL]`
+
+## Main Concept
+Regex helps identify unwanted or important patterns in raw text.
+The cleaned text can then be used for further NLP tasks.
+
+## Run
+python Assignment2.py
