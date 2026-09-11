@@ -1,1 +1,54 @@
 
+# Assignment 4 – Word Embeddings using Word2Vec
+
+## Aim
+Convert words into numerical vectors using Word2Vec and visualize them.
+
+## Important Concepts
+
+- Word Embedding represents words as numerical vectors.
+- Similar words have similar vector representations.
+- Word2Vec learns word meaning from surrounding words.
+- `gensim` is used to create the Word2Vec model.
+- PCA reduces high-dimensional vectors to 2 dimensions for visualization.
+
+## Steps
+1. Create a small text corpus.
+2. Train a Word2Vec model.
+3. Create 100-dimensional word vectors.
+4. Check vocabulary size.
+5. Find words similar to `neural`.
+6. Select words for visualization.
+7. Apply PCA to reduce 100 dimensions to 2.
+8. Plot the word embeddings.
+
+## Important Parameters
+
+- `vector_size=100` → each word has 100 values.
+- `window=5` → considers 5 words around the target.
+- `min_count=1` → includes every word.
+- `sg=1` → uses Skip-gram model.
+- `epochs=100` → trains the model 100 times.
+
+## Important Functions
+
+- `Word2Vec()` → creates and trains the model.
+- `model.wv` → accesses word vectors.
+- `most_similar()` → finds similar words.
+- `PCA()` → reduces dimensions.
+- `fit_transform()` → converts vectors into 2D.
+- `plt.scatter()` → plots word vectors.
+
+## Output
+
+1. Vocabulary size
+2. 5 words similar to `neural`
+3. PCA visualization of word embeddings
+
+## Important Point
+
+Word2Vec learns word representations based on the context in which
+words appear.
+
+The given implementation uses **Word2Vec**. GloVe is a different
+word-embedding technique and is not implemented in this code.
